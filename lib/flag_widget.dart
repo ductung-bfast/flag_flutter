@@ -1,5 +1,5 @@
 import 'package:enum_to_string/enum_to_string.dart';
-import 'package:flag/flag_enum.dart';
+import 'package:ensign/flag_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -125,22 +125,12 @@ class Flag extends StatelessWidget {
 
     return flagsCode.contains(countryName)
         ? PlatformSvg(
-            'packages/flag/res/flag/$countryName.svg',
+            'packages/ensign/res/flag/$countryName.svg',
             width: width,
             height: height,
             semanticLabel: country,
             fit: fit,
           )
         : replacement;
-  }
-
-  static Future<void> preloadFlag({
-    required BuildContext context,
-    List<String> flagList = flagsCode,
-  }) async {
-    for (final flag in flagList) {
-      await PlatformSvg.preloadFlag(
-          context, 'packages/flag/res/flag/$flag.svg');
-    }
   }
 }

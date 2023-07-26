@@ -44,14 +44,4 @@ class PlatformSvg extends Interface.PlatformSvg {
       ),
     );
   }
-
-  static Future<void> preloadFlag(
-      BuildContext context, String assetName) async {
-    await precachePicture(
-        ExactAssetPicture(
-          SvgPicture.svgStringDecoder,
-          assetName,
-        ),
-        context);
-  }
 }

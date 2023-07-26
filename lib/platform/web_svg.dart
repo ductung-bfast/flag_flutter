@@ -1,4 +1,4 @@
-import 'package:flag/platform/canvas_kit.dart';
+import 'package:ensign/platform/canvas_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -52,17 +52,5 @@ class PlatformSvg extends Interface.PlatformSvg {
             semanticLabel: semanticLabel,
             fit: fit,
           );
-  }
-
-  static Future<void> preloadFlag(
-      BuildContext context, String assetName) async {
-    isCanvasKit
-        ? await precachePicture(
-            ExactAssetPicture(
-              SvgPicture.svgStringDecoder,
-              assetName,
-            ),
-            context)
-        : await precacheImage(NetworkImage("assets/$assetName"), context);
   }
 }
