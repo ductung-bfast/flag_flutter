@@ -1,6 +1,6 @@
 name: ensign
 description: A flag Flutter package. Use for showing flags. All flags came from https://www.un.org/en/member-states/index.html . 
-version: 5.0.3
+version: 5.0.4
 homepage: https://github.com/ductung-bfast/flag_flutter
 
 environment:
